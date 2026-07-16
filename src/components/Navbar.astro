@@ -1,0 +1,29 @@
+---
+const { logo, slogan } = Astro.props;
+const currentPage = Astro.url.pathname.replace("/astro-test", "")|| "/";
+---
+
+<header class="navbar">
+
+  <a href="/" class="logo">
+    {logo}
+    {slogan}
+  </a>
+
+  <nav>
+
+    <a href="/astro-test"
+    class={currentPage === "/" ? "active" : ""}
+    >  
+        Hem
+    </a>
+    <a href="/astro-test/om-oss"
+    class={currentPage === "/om-oss" ? "active" : ""}
+    >Om oss</a>
+    <a href="/astro-test/aktuellt">Aktuellt</a>
+    <a href="/astro-test/kontakt">Kontakt</a>
+
+  </nav>
+
+  <p>{currentPage}</p>
+</header>
