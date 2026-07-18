@@ -1,0 +1,13 @@
+---
+const { title, subtitle, buttonText, buttonLink } = Astro.props;
+---
+
+<section class="hero">
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
+    {buttonText && buttonLink && (
+        <a href={buttonLink} class="button">
+            {buttonText}
+        </a>
+    )}
+</section>

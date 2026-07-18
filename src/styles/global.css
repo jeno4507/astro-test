@@ -45,3 +45,70 @@ p {
     color: rgb(0, 252, 105);
     font-weight: 700;
 }
+
+.footer {
+    font-size: 0.9rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-top: 1px solid #760707;
+}
+
+.hero {
+    background-color: beige;
+}
+.hero h1{
+    font-size: 2rem;
+}
+
+.hero .button{
+
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: black;
+    color: #ddd;
+    text-decoration: none;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* ===== Nyhetslista ===== */
+
+.news-card {
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.news-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.news-card a:hover h2 {
+    text-decoration: underline;
+}
+
+.news-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    max-height: 500px;
+}
+
+.news-card h2 {
+    margin-top: 1rem;
+}
+
+/* ===== Artikelsida ===== */
+
+.news-article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2rem 0;
+}

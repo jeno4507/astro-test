@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+const posts = await getCollection("aktuellt");
+---
+
+<BaseLayout title="Aktuellt">
+<h1>Aktuellt</h1>
+	{
+    posts.map((post) => (
+        <article class="news-card">
+          <a href={`/aktuellt/${post.id}`}>
+              <Image
+                  src={post.data.image}
+                  alt={post.data.title}
+                  class="news-thumbnail"
+              />
+
+              <h2>{post.data.title}</h2>
+          </a>
+
+          <time datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString("sv-SE")}
+          </time>
+      </article>
+      ))
+  }
+</BaseLayout>
+
