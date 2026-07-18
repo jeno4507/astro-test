@@ -8,22 +8,28 @@ const links = [
     { href: "/kontakt", text: "Kontakt" }
 ];
 ---
+<nav class="navbar">
+    <div class="navbar-container">
 
-<header class="navbar">
-
-  <a href="/" class="logo">
-    {logo}
-  </a>
-
-  <nav>
-    {
-      links.map((link) => (
-        <a href={link.href} class={currentPage === link.href ? "active" : ""}>
-          {link.text}
+      <div class="brand">
+        <a href="/" class="logo">
+            {logo}
         </a>
-      ))
-    }
 
-  </nav>
+        <p class="slogan">
+            {slogan}
+        </p>
+      </div>
 
-</header>
+        <div class="nav-links">
+          {
+            links.map((link) => (
+              <a href={link.href} class={currentPage === link.href ? "active" : ""}>
+                {link.text}
+              </a>
+            ))
+          }    
+        </div>
+
+    </div>
+</nav>

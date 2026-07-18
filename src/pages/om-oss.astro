@@ -1,16 +1,8 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 ---
-
-<html lang="sv">
-  <head> 
-    <meta charset="utf-8" />
-		<title>Om oss</title>
-  </head>
-  <body>
-    <Navbar logo="Jennys sida" slogan="på gud"/>
-    <h1>Om oss</h1>
-    <p>Det här är en testsida.</p>
-  </body>
-</html>
+<BaseLayout title="Om oss">
+  <h1>Om oss</h1>
+  <p>Det här är en testsida.</p>
+</BaseLayout>
